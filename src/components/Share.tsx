@@ -10,11 +10,11 @@ import {
   WhatsappShareButton,
 } from 'react-share'
 
-import PostInterface from '../interfaces/PostInterface'
+// import PostInterface from '../interfaces/PostInterface'
 import { TWITTER_HANDLE, APP_NAME } from '../utils/constants'
 import colors from '../utils/colors'
 
-export default function ShareButtons({ post }: { post: PostInterface }) {
+export default function ShareButtons({ post }: { post: any }) {
   const url = post.link
   const title = `${post.title} - ${APP_NAME}`
   const hashtags = `juno7`
