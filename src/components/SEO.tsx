@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { DOMAIN, APP_NAME, TWITTER_HANDLE } from '../utils/constants'
+import { DOMAIN, APP_NAME, TWITTER_HANDLE, FB_APP_ID } from '../utils/constants'
 
 type Props = {
   title?: string,
@@ -32,7 +32,7 @@ export default function SEO({ title, url, description, type, image, imageWidth, 
         {imageWidth && <meta property="og:image:width" content={`${imageWidth}`} key="image_width" />}
         {imageHeight && <meta property="og:image:height" content={`${imageHeight}`} key="image_height" />}
 
-        {/* <meta property="fb:app_id" content={FB_APP_ID} key="fb_app_id" /> */}
+        <meta property="fb:app_id" content={FB_APP_ID} key="fb_app_id" />
 
         <meta name="twitter:card" content="summary" key="twitter_card" />
         <meta name="twitter:site" content={`@${TWITTER_HANDLE}`} key="twitter_site" />

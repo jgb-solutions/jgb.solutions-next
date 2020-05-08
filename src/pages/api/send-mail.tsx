@@ -1,5 +1,7 @@
-import { NextApiRequest, NextApiResponse } from "next"
 import nodemailer from 'nodemailer'
+import { NextApiRequest, NextApiResponse } from "next"
+
+import { APP_NAME, SITE_EMAIL } from "../../utils/constants"
 
 interface RequestBody {
   name: string
@@ -10,36 +12,55 @@ interface RequestBody {
 }
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  res.setHeader('Content-Type', 'application/json')
+  if (req.method === 'POST') {
+    res.setHeader('Content-Type', 'application/json')
 
-  try {
-    await sendEmail(req.body)
-    res.statusCode = 200
-    res.json({ success: true })
-  } catch (error) {
-    console.log('error', error)
-    res.statusCode = error.responsCode
-    res.json({ success: false })
+    try {
+      await sendEmail(req.body)
+
+      res.statusCode = 200
+      res.json({ success: true })
+    } catch (error) {
+      console.log('error', error)
+      res.statusCode = 500
+      res.json({ success: false })
+    }
   }
 
+  res.statusCode = 403
+  res.end('Only POST requests are supported.')
 }
 
-const sendEmail = async (body: RequestBody) => {
+const sendEmail = async ({ name, email, subject, message }: RequestBody) => {
+  const emailMessage = `
+    ${name} wrote: \n
+    ${message}
+  `
   const transport = nodemailer.createTransport({
     host: "smtp.hostinger.com",
     port: 465,
     secure: true,
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD
+      user: SITE_EMAIL,
+      pass: process.env.SMTP_PASSWORD
     }
   })
 
   await transport.sendMail({
-    from: process.env.EMAIL,
-    to: body.email || 'jgbneatdesign@gmail.com',
-    subject: body.subject || `New Mail from JGB Solutions`,
-    text: body.message || `Some plain text message`,
-    html: body.message || `Come straight form your site`
+    from: {
+      name: APP_NAME,
+      address: SITE_EMAIL
+    },
+    to: {
+      name: APP_NAME,
+      address: SITE_EMAIL
+    },
+    replyTo: {
+      name,
+      address: email || 'Empty email'
+    },
+    subject: `Mail from JGB Solutions: ${subject}`,
+    text: emailMessage,
+    html: emailMessage
   })
 }
