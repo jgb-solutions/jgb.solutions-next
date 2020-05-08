@@ -9,7 +9,7 @@ const menuItems = [
     name: 'About'
   },
   {
-    to: '/services',
+    to: '/#services',
     name: 'Services'
   },
   {

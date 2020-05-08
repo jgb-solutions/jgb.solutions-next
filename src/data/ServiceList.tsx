@@ -1,14 +1,12 @@
-import React from "react"
-import { MdWeb } from 'react-icons/md'
 import {
-  MdPhoneAndroid,
-  MdStorage,
+  MdWeb,
   MdDomain,
-  MdMic,
-  MdTv,
-  MdDesktopMac,
+  MdStorage,
   MdDashboard,
-  MdHeadsetMic
+  MdDesktopMac,
+  MdHeadsetMic,
+  MdPhoneAndroid,
+  MdSubscriptions
 } from 'react-icons/md'
 
 const ServiceList = [
@@ -17,80 +15,83 @@ const ServiceList = [
     image: '/assets/images/consulting-web.jpg',
     title: 'Consulting',
     description: `
-      We have a team of experts available for consulting
+      We have experts available for consulting
       on various kinds of projects of different sizes.
+      Either Web, Mobil and general web services and APIs.
     `,
-    button: 'Request a Quote',
   },
   {
     icon: <MdDesktopMac />,
     image: '/assets/images/web-app-web.jpg',
     title: 'Web App',
-    description: 'You need a web platform, want to manage users, sell products, services with real time analytics or a backend to support your mobile application.',
-    button: 'Request a Quote',
+    description: `
+      We've been building websites for almost 10 years,
+      and we we've done so with a plethora of technoloqies,
+      from legacy to shiny new ones.
+      We can design, build and ship web platforms tailored to your needs.
+    `,
   },
   {
     icon: <MdPhoneAndroid />,
     image: '/assets/images/mobile-web.jpg',
     title: 'Mobile App',
     description: `
-      You want a mobile application that will consume data from an API, do calculations, allow your web platform's users to reach the service in real time. Or it may be as simple as a presentation application with a couple of screens.
+      Building highly interactive mobile apps is one of our key strenghs.
+      We use awesome technlogies such as React Native and Ionic to ship
+      great products faster on both Android and iOS.
     `,
-    button: 'Request a Quote',
   },
   {
     icon: <MdStorage />,
     image: '/assets/images/web-hosting-web.jpg',
     title: 'Web Hosting',
     description: `
-      Every website or web application needs a home on the internet so they can be accessed all over the world. I happen to be good at that too. Ranging from simple shared hosting to a customized VPS (Virtual Private Server) to a dedicated server, or configuring a CDN (Content Delivery Network) for even faster loading time, I can help you get the best for your budget.
+      Publishing your digital product to the public is mandory for people
+      to use it. We can help host your websites, web apps and/or services.
+      Ranging from using CDNs to caching, performance is in the heart of what we do.
     `,
-    button: 'Request a Quote',
   },
   {
     icon: <MdDomain />,
     image: '/assets/images/domain-web.jpg',
     title: 'Domain Name',
     description: `
-      Every successful online endeavor starts with a good name and a sweet web address. The latter is called a domain name and is what people will type in their browsers' address bar to access your business online. I can help with finding and registering a great domain name.
+      Registering a domain name is the first step to your startup.
+      Keep it short, sweet and marketable. We know the best places
+      to buy and manage yours.
     `,
-    button: 'Request a Quote',
   },
   {
-    icon: <MdMic />,
+    icon: <MdSubscriptions />,
     image: '/assets/images/radio-web.jpg',
-    title: 'Online Radio',
+    title: 'Broadcasting',
     description: `
-      Whether you are in the media, a church, an organization or even a DJ and want to broadcast live audio online to reach more people/fans/users, I have experience with that. I can even get you international number(s) for people outside the country to call and listen. And much more.
+      Having a presence online is mandatory in this day and age,
+      especially if you are in the Media or thinking of entering that medium.
+      Building a great audience online is possible with your own radio or TV.
+      We can help.
     `,
-    button: 'Request a Quote',
-  },
-  {
-    icon: <MdTv />,
-    image: '/assets/images/online-tv-web.jpg',
-    title: 'Online TV',
-    description: `
-      It's 2019 and people spend more time on their computer and mobile devices more than ever. So if you are a TV, doing multimedia events, an organization... and want to reach more users, broadcasting images and/or videos online might be a good option. Depending on your budget and the size of the audience you want to target, I might have something for you.
-    `,
-    button: 'Request a Quote',
   },
   {
     icon: <MdWeb />,
     image: '/assets/images/wordpress-web.jpg',
     title: 'WP Theme',
     description: `
-      You already have a design and want to code it or that static site is already online but you can't update it regularly because you don't know anything about HTML or don't want to get your hands dirty each time you want to make an update. It's frustrating. Isn't it? It's okay. Let me translate that design or static site to a WordPress theme for you so you can use WordPress, the most popular Content Management System in the world, to do it yourself. I'll even provide educational assistance and materials to help you get on speed with the platfom.
+      With almost 10 years of experience working at all level with WordPress,
+      We can be trusted to design, build and ship great websites based on that
+      platform. We can also work with existing themes to create your website or
+      app quicly.
     `,
-    button: 'Request a Quote',
   },
   {
     icon: <MdDashboard />,
     image: '/assets/images/seo-web.jpg',
     title: 'Marketing | SEO',
     description: `
-      Having a presence online is great. Good job, you've made it! But wait. You have no visitors, or not the amount you'd expected? You should know by now that people won't know about your website/app if you don't market it. And it has to be optimized for search engine such as Google so people can find it when they search for something related to your business. Luckily for you I've been managing websites that have thousands of visitors a day. And I can help you. I'll leverage social media and other search engine optimization techniques to get people to know about your business.
+      Having your product online is great, really great.
+      Now you want users. We can help leverage SEO tools and Social Media
+      to bring that traffic that you deserve on your platform. We can help.
     `,
-    button: 'Request a Quote',
   },
 ]
 
