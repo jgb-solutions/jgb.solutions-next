@@ -8,12 +8,8 @@ import MainLayout from "../components/layouts/Main"
 import HomeSlider from "../components/HomeSlider"
 import ServiceList from "../data/ServiceList"
 
-const title = "Web & Mobile Development Services"
-
 const IndexPage = () => (
   <MainLayout>
-    <SEO title={title} />
-
     <Header />
 
     <div className="shadow-md mb-12 rounded-large overflow-hidden">

@@ -1,21 +1,28 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-import colors from '../utils/colors'
-
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="fr">
+      <Html lang="en">
         <Head>
           <meta charSet="ut8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" key="http-equiv" />
           <meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
 
-          <link rel="icon" href="https://i1.wp.com/www.juno7.ht/wp-content/uploads/2019/01/cropped-1024j7.jpg?fit=32%2C32&#038;ssl=1" sizes="32x32" />
-          <link rel="icon" href="https://i1.wp.com/www.juno7.ht/wp-content/uploads/2019/01/cropped-1024j7.jpg?fit=192%2C192&#038;ssl=1" sizes="192x192" />
-          <link rel="apple-touch-icon" href="https://i1.wp.com/www.juno7.ht/wp-content/uploads/2019/01/cropped-1024j7.jpg?fit=180%2C180&#038;ssl=1" />
-          <meta name="msapplication-TileImage" content="https://i1.wp.com/www.juno7.ht/wp-content/uploads/2019/01/cropped-1024j7.jpg?fit=270%2C270&#038;ssl=1" />
+          <link rel="icon" sizes="192x192" type="image/png" href="/assets/icons/android-icon-192x192-dunplab-008.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180-dunplab-008.png" />
+          <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152-dunplab-008.png" />
+          <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144-dunplab-008.png" />
+          <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120-dunplab-008.png" />
+          <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114-dunplab-008.png" />
+          <link rel="icon" sizes="96x96" type="image/png" href="/assets/icons/favicon-96x96-dunplab-008.png" />
+          <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76-dunplab-008.png" />
+          <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72-dunplab-008.png" />
+          <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60-dunplab-008.png" />
+          <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57-dunplab-008.png" />
+          <link rel="icon" sizes="32x32" type="image/png" href="/assets/icons/favicon-32x32-dunplab-008.png" />
+          <link rel="icon" sizes="16x16" type="image/png" href="/assets/icons/favicon-16x16-dunplab-008.png" />
 
           {/* <script dangerouslySetInnerHTML={{
             __html: `
@@ -35,7 +42,7 @@ export default class MyDocument extends Document {
             `
           }} /> */}
         </Head>
-        <body className="bg-grey">
+        <body className="bg-grey font-sans leading-normal antialiased">
           <Main />
           <NextScript />
 

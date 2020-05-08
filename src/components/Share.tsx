@@ -17,7 +17,7 @@ import colors from '../utils/colors'
 export default function ShareButtons({ post }: { post: any }) {
   const url = post.link
   const title = `${post.title} - ${APP_NAME}`
-  const hashtags = `juno7`
+  const hashtags = `jgb solutions design development`
 
   return (
     <div className="flex mb-2 mt-2">

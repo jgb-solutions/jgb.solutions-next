@@ -6,10 +6,11 @@ interface Props {
   containerStyle?: CSSProperties
   style?: CSSProperties
   className?: string
-  containerClassName?: string,
+  containerClassName?: string
+  url?: string
 }
 
-export default function Logo({ containerStyle, style, className, containerClassName }: Props) {
+export default function Logo({ containerStyle, style, className, containerClassName, url }: Props) {
   const containerStyles: CSSProperties = {
     ...containerStyle
   }
@@ -26,7 +27,7 @@ export default function Logo({ containerStyle, style, className, containerClassN
           <img
             style={styles}
             className={className}
-            src="/assets/images/logo-jgb-solutions-21k.png"
+            src={url || "/assets/images/logo-jgb-solutions-21k.png"}
             alt={APP_NAME} />
 
         </a>

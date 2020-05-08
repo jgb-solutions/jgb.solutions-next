@@ -40,7 +40,7 @@ const socialNetworks = [
 export default function Footer() {
   return (
     <nav className="shadow-md rounded-t-large bg-dark text-white px-2 py-8 flex flex-col items-center">
-      <Logo style={{ width: 300 }} />
+      <Logo style={{ width: 200 }} url="/assets/images/logo-jgb-solutions-square-23k.png" />
 
       <div className="flex w-1/2 justify-around my-12">
         {socialNetworks.map(socialNetwork => {

@@ -14,11 +14,11 @@ type Props = {
 }
 
 export default function SEO({ title, url, description, type, image, imageWidth, imageHeight }: Props) {
-  const titleContent = `${APP_NAME} - ${title || "Actualité, Politique, Culture, Sport"}`
+  const titleContent = `${APP_NAME} - ${title || "Digital Design & Development"}`
   const descriptionContent = description || `
-      Juno7, Haïti News : Agence de Presse Numérique. Actualité et Informations Nationales et Internationales: Politique, Sport, Culture. Plus d'un Million d'Abonnés
+    We are a digital design and development services agency based in Delmas, Port-au-Prince, Haiti.
   `
-  const imageContent = image || `/assets/images/logo-juno7.jpg`
+  const imageContent = image || `/assets/images/JGB-Solutions-Splash.png`
 
   return (
     <>
