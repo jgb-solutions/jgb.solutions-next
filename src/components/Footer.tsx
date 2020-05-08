@@ -42,7 +42,7 @@ export default function Footer() {
     <nav className="shadow-md rounded-t-large bg-dark text-white px-2 py-8 flex flex-col items-center">
       <Logo style={{ width: 200 }} url="/assets/images/logo-jgb-solutions-square-23k.png" />
 
-      <div className="flex w-1/2 justify-around my-12">
+      <div className="flex w-full sm:w-1/2 justify-around my-12 px-8">
         {socialNetworks.map(socialNetwork => {
           const { icon: Icon, color, title, link } = socialNetwork
 
@@ -54,7 +54,11 @@ export default function Footer() {
         })}
       </div>
 
-      <p className="text-xs">Built with <MdFavorite className="inline text-red-500" /> in Delmas, &copy; {(new Date).getFullYear()} </p>
+      <div className="text-xs text-center">
+        <p className="mb-4">
+          Built with Next.js, Tailwind CSS and a lot of <MdFavorite className="inline text-red-500" />.</p>
+        <p>&copy; {(new Date).getFullYear()}</p>
+      </div>
     </nav>
   )
 }

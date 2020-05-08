@@ -6,7 +6,7 @@ import Logo from '../components/Logo'
 import Link from 'next/link'
 
 const NotFoundPage = () => (
-  <MainLayout className="bg-dark text-white">
+  <MainLayout wrapperClassName="bg-dark text-white">
     <SEO title="404: Page Not Found" />
     <div className="flex flex-col items-center justify-center min-h-screen">
       <Logo style={{ width: 300 }} className="mb-12" />
