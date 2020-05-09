@@ -7,7 +7,7 @@ import Link from "next/link"
 export default () => (
   <Slider
     autoplay={2000}
-    touchDisabled={false} classNames={{}}>
+    touchDisabled={true}>
     {ServiceList.map((item, index) => (
       <div className="" key={index} style={{ background: `url('${item.image}') no-repeat center`, }}>
         <div className="bg-black bg-opacity-50 h-full flex flex-col justify-between items-end py-3 pr-3 text-white">

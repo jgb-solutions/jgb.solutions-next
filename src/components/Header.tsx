@@ -30,8 +30,8 @@ export default function Header() {
       </a>
       <ul className="flex w-full sm:w-1/2 md:1/3 sm:text-lg text-xs font-bold uppercase pt-3 pb-2 sm:p-0 justify-around sm:justify-between sm:mr-2">
         {menuItems.map((menuItem, index) => (
-          <li className="hover:text-orange">
-            <Link href={menuItem.to} key={index}>
+          <li className="hover:text-orange" key={index}>
+            <Link href={menuItem.to}>
               <a>{menuItem.name}</a>
             </Link>
           </li>

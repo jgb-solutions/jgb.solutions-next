@@ -8,7 +8,6 @@ const Contact = () => (
   <MainLayout wrapperClassName="bg-dark text-white">
     <SEO title="Contact US" />
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <Logo style={{ width: 300 }} className="mb-12" />
       <h1 className="uppercase text-2xl mb-4">Page under construction</h1>
       <p className="text-xs text-center">
         We are still building this page, please come back later.

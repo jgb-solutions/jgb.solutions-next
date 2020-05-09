@@ -49,11 +49,11 @@ export default function Footer() {
 
       <p className="text-2xl">{APP_SLOGAN}</p>
       <div className="flex w-full sm:w-1/2 justify-around my-12 px-8">
-        {socialNetworks.map(socialNetwork => {
+        {socialNetworks.map((socialNetwork, index) => {
           const { icon: Icon, color, title, link } = socialNetwork
 
           return (
-            <a href={link} target="__blank">
+            <a href={link} target="__blank" key={index}>
               <Icon className={`${color}`} size={30} title={title} />
             </a>
           )

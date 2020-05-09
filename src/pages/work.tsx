@@ -1,18 +1,33 @@
 import React from "react"
+import Link from "next/link"
+import { MdCreate } from 'react-icons/md'
 
 import SEO from "../components/SEO"
 import MainLayout from '../components/layouts/Main'
-import Logo from "../components/Logo"
+import { WorkInterFace } from "./work/[slug]"
+import WorkList from "../data/WorkList"
+import WorkCard from "../components/WorkCard"
+
+const title = "Our Work"
 
 const Work = () => (
-  <MainLayout wrapperClassName="bg-dark text-white">
-    <SEO title="Our Work" />
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <Logo style={{ width: 300 }} className="mb-12" />
-      <h1 className="uppercase text-2xl mb-4">Page under construction</h1>
-      <p className="text-xs text-center">
-        We are still building this page, please come back later.
-      </p>
+  <MainLayout>
+    <SEO title={title} />
+
+    <div className="mb-3 flex items-center justify-center">
+      <h1 className="text-4xl sm:text-5xl m-0 text-orange uppercase flex items-center">
+        <MdCreate fontSize="inherit" /> <span className="ml-2">{title}</span>
+      </h1>
+    </div>
+
+    <div className="mb-12 grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+      {WorkList.map((work: WorkInterFace) => (
+        <Link href='/work/[slug]' as={`/work/${work.slug}`} key={work.slug}>
+          <a>
+            <WorkCard work={work} />
+          </a>
+        </Link>
+      ))}
     </div>
   </MainLayout>
 )

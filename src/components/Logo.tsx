@@ -23,14 +23,14 @@ export default function Logo({ containerStyle, style, className, containerClassN
   return (
     <div style={containerStyles} className={containerClassName}>
       <Link href="/">
-        <a>
+        <span className="cursor-pointer">
           <img
             style={styles}
             className={className}
             src={url || "/assets/images/logo-jgb-solutions-21k.png"}
-            alt={APP_NAME} />
-
-        </a>
+            alt={APP_NAME}
+          />
+        </span>
       </Link>
     </div>
   )
