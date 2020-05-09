@@ -4,9 +4,9 @@ import SEO from "../components/SEO"
 import MainLayout from '../components/layouts/Main'
 import Logo from "../components/Logo"
 
-const Contact = () => (
+const Work = () => (
   <MainLayout wrapperClassName="bg-dark text-white">
-    <SEO title="Contact US" />
+    <SEO title="About Us" />
     <div className="flex flex-col items-center justify-center min-h-screen">
       <Logo style={{ width: 300 }} className="mb-12" />
       <h1 className="uppercase text-2xl mb-4">Page under construction</h1>
@@ -17,4 +17,4 @@ const Contact = () => (
   </MainLayout>
 )
 
-export default Contact
+export default Work

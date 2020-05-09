@@ -1,4 +1,5 @@
 export const APP_NAME = `JGB Solutions`
+export const APP_SLOGAN = `Digital Design & Development`
 export const FB_APP_ID = `544878722894179`
 export const TWITTER_HANDLE = `jgb_solutions`
 export const SITE_EMAIL = `services@jgb.solutions`

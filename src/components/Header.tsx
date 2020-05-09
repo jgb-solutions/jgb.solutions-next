@@ -5,7 +5,7 @@ import Logo from './Logo'
 
 const menuItems = [
   {
-    to: '/',
+    to: '/about',
     name: 'About'
   },
   {

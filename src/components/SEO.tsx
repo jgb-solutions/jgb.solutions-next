@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { DOMAIN, APP_NAME, TWITTER_HANDLE, FB_APP_ID } from '../utils/constants'
+import { DOMAIN, APP_NAME, TWITTER_HANDLE, FB_APP_ID, APP_SLOGAN } from '../utils/constants'
 
 type Props = {
   title?: string,
@@ -14,7 +14,7 @@ type Props = {
 }
 
 export default function SEO({ title, url, description, type, image, imageWidth, imageHeight }: Props) {
-  const titleContent = `${APP_NAME} - ${title || "Digital Design & Development"}`
+  const titleContent = `${APP_NAME} - ${title || APP_SLOGAN}`
   const descriptionContent = description || `
     We are a digital design and development services agency based in Delmas, Port-au-Prince, Haiti.
   `

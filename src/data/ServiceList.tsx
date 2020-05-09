@@ -17,7 +17,7 @@ const ServiceList = [
     description: `
       We have experts available for consulting
       on various kinds of projects of different sizes.
-      Either Web, Mobil and general web services and APIs.
+      Either Web, Mobile and general web services and APIs.
     `,
   },
   {
@@ -48,7 +48,7 @@ const ServiceList = [
     description: `
       Publishing your digital product to the public is mandory for people
       to use it. We can help host your websites, web apps and/or services.
-      Ranging from using CDNs to caching, performance is in the heart of what we do.
+      Ranging from using CDNs to caching, performance is at the heart of what we do.
     `,
   },
   {
