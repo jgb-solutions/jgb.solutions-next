@@ -158,7 +158,7 @@ const WorkList = [
     slug: 'juno7',
     name: 'Juno7',
     featured: false,
-    type: 'website',
+    type: 'consulting',
     url: `https://www.juno7.ht`,
     detail: `
       TODO: TEXT COMING SOON.

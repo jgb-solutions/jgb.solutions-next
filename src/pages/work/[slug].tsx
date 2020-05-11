@@ -7,6 +7,7 @@ import MainLayout from '../../components/layouts/Main'
 import Icon from '../../components/Icon'
 import Link from 'next/link'
 import WorkCard from '../../components/WorkCard'
+import SEO from '../../components/SEO'
 
 export interface WorkInterFace {
   image: string
@@ -21,6 +22,7 @@ export interface WorkInterFace {
 export default function Work({ work }: { work: WorkInterFace }) {
   return (
     <MainLayout>
+      <SEO title={work.name} image={`/assets/images/screenshots/${work.image}`} />
       <div className="grid  md:grid-cols-2 gap-3 mb-12">
         <div className="rounded-large overflow-hidden shadow-2xl">
           <img src={`/assets/images/screenshots/${work.image}`} />
