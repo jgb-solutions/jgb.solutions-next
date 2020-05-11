@@ -22,7 +22,11 @@ export interface WorkInterFace {
 export default function Work({ work }: { work: WorkInterFace }) {
   return (
     <MainLayout>
-      <SEO title={work.name} image={`/assets/images/screenshots/${work.image}`} />
+      <SEO
+        title={work.name}
+        url={`/work/${work.slug}`}
+        image={`/assets/images/screenshots/${work.image}`}
+      />
       <div className="grid  md:grid-cols-2 gap-3 mb-12">
         <div className="rounded-large overflow-hidden shadow-2xl">
           <img src={`/assets/images/screenshots/${work.image}`} />
