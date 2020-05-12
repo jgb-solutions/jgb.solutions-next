@@ -3,7 +3,7 @@ import React from "react"
 import SEO from "../components/SEO"
 import MainLayout from '../components/layouts/Main'
 
-const Work = () => (
+const about = () => (
   <MainLayout wrapperClassName="bg-dark text-white">
     <SEO title="About Us" />
     <div className="flex flex-col items-center justify-center min-h-screen">
@@ -15,4 +15,4 @@ const Work = () => (
   </MainLayout>
 )
 
-export default Work
+export default about

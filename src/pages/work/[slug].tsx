@@ -1,34 +1,43 @@
 import React from 'react'
+import Link from 'next/link'
 import { GetStaticProps } from 'next'
 import { MdCreate } from 'react-icons/md'
 
-import WorkList from '../../data/WorkList'
-import MainLayout from '../../components/layouts/Main'
-import Icon from '../../components/Icon'
-import Link from 'next/link'
-import WorkCard from '../../components/WorkCard'
 import SEO from '../../components/SEO'
+import Icon from '../../components/Icon'
+import WorkList from '../../data/WorkList'
+import WorkCard from '../../components/WorkCard'
+import MainLayout from '../../components/layouts/Main'
 
 export interface WorkInterFace {
   image: string
   slug: string
   name: string
   featured: boolean
-  type: string
+  type: 'website' | 'web app' | 'mobile app' | 'consulting' | 'web hosting' | 'domain name' | 'broadcasting' | 'marketing' | 'seo'
   url: string
   detail: string
 }
 
-export default function Work({ work }: { work: WorkInterFace }) {
+const getRelatedWorks = (WorkList: WorkInterFace[], work: WorkInterFace) => {
+  const sameTypesWorks = WorkList.filter(w => w.type === work.type && w.slug !== work.slug)
+  const randomWorks = [...sameTypesWorks].sort(() => Math.random() - 0.5)
+  const relatedWorks = randomWorks.slice(0, 6)
+  return relatedWorks
+}
+
+export default function Work({ work, relatedWorks }: { work: WorkInterFace, relatedWorks: WorkInterFace[] }) {
+
   return (
     <MainLayout>
       <SEO
         title={work.name}
         url={`/work/${work.slug}`}
         image={`/assets/images/screenshots/${work.image}`}
+        description={work.detail}
       />
-      <div className="grid  md:grid-cols-2 gap-3 mb-12">
-        <div className="rounded-large overflow-hidden shadow-2xl">
+      <div className="grid md:grid-cols-3 gap-3 mb-12">
+        <div className="md:col-span-2 rounded-large overflow-hidden shadow-2xl">
           <img src={`/assets/images/screenshots/${work.image}`} />
         </div>
         <div>
@@ -41,26 +50,29 @@ export default function Work({ work }: { work: WorkInterFace }) {
               <Icon type={work.type} /> <span className="ml-2">Check them out</span>
             </a>
           </h4>
-          <p>{work.detail}</p>
+          <div dangerouslySetInnerHTML={{ __html: work.detail }} />
         </div>
       </div>
 
+      {relatedWorks.length > 0 && (
+        <>
+          <div className="mb-3 flex items-center justify-center">
+            <h3 className="text-4xl sm:text-5xl m-0 text-dark uppercase flex items-center">
+              <MdCreate fontSize="inherit" /> <span className="ml-2">Related Work</span>
+            </h3>
+          </div>
 
-      <div className="mb-3 flex items-center justify-center">
-        <h3 className="text-4xl sm:text-5xl m-0 text-dark uppercase flex items-center">
-          <MdCreate fontSize="inherit" /> <span className="ml-2">Related Work</span>
-        </h3>
-      </div>
-
-      <div className="mb-12 grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-        {WorkList.filter(work => work.featured).map((work: WorkInterFace) => (
-          <Link href='/work/[slug]' as={`/work/${work.slug}`} key={work.slug}>
-            <a>
-              <WorkCard work={work} />
-            </a>
-          </Link>
-        ))}
-      </div>
+          <div className="mb-12 grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+            {relatedWorks.map((w: WorkInterFace) => (
+              <Link href='/work/[slug]' as={`/work/${w.slug}`} key={w.slug}>
+                <a>
+                  <WorkCard work={w} />
+                </a>
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
     </MainLayout>
   )
 }
@@ -73,12 +85,18 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  let relatedWorks: WorkInterFace[] = []
+
   if (params) {
     const { slug } = params
 
     const work = WorkList.find(w => w.slug === slug)
 
-    return { props: { work } }
+    if (work) {
+      relatedWorks = getRelatedWorks(WorkList, work)
+    }
+
+    return { props: { work, relatedWorks } }
   }
 
   return { props: {} }
