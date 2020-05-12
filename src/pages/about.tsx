@@ -15,6 +15,7 @@ const About = () => (
     <SEO
       title={title}
       description={seoDescription}
+      url="/about"
     />
 
     <div className="mb-4 flex items-center justify-center">
