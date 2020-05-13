@@ -12,7 +12,7 @@ const title = "Our Work"
 
 const Work = () => (
   <MainLayout>
-    <SEO title={title} />
+    <SEO title={title} url="/work" description={`All of our work in the past few years`} />
 
     <div className="mb-3 flex items-center justify-center">
       <h1 className="text-4xl sm:text-5xl m-0 text-orange uppercase flex items-center">
