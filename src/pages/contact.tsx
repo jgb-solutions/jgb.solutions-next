@@ -8,9 +8,10 @@ import Input from "../components/Input"
 import { ContactFormData } from "./api/send-mail"
 
 const title = "Contact US"
-const seoDescription = `(formerly JGB Neat Design) was started by Jean Gérard Bousiquot in early 2013 as a way to
-        freelance professionally. As the time passes he got more clients,
-        ranging from entrepreneurs amd small enterprises to medium ones in Haiti and abroad.`
+const seoDescription = `
+  Potential customers can use this page to contact use for anything related to
+  design, development and other interesting idea. Just reach out!
+`
 
 export default function Contact() {
   const [isLoading, setIsLoading] = React.useState(false)
@@ -93,7 +94,7 @@ export default function Contact() {
               </h4>
             )}
 
-            <div className="mb-12 w-full max-w-lg mx-auto bg-white p-4 rounded-large shadow-xl">
+            <div className="mb-48 w-full max-w-lg mx-auto bg-white p-4 rounded-large shadow-xl">
               <form method="POST" onSubmit={handleSubmit(handleSendEmail)}>
                 <Input
                   type="text"
