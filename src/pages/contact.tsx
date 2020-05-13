@@ -6,6 +6,8 @@ import SEO from "../components/SEO"
 import MainLayout from '../components/layouts/Main'
 import Input from "../components/Input"
 import { ContactFormData } from "./api/send-mail"
+import { useRouter } from "next/dist/client/router"
+import { route } from "next/dist/next-server/server/router"
 
 const title = "Contact US"
 const seoDescription = `
@@ -14,6 +16,7 @@ const seoDescription = `
 `
 
 export default function Contact() {
+  const router = useRouter()
   const [isLoading, setIsLoading] = React.useState(false)
   const [emailSent, setEmailSent] = React.useState(false)
   const [errorSending, setErrorSending] = React.useState(false)
@@ -24,7 +27,11 @@ export default function Contact() {
     errors,
     formState,
     reset
-  } = useForm<ContactFormData>({ mode: 'onBlur' })
+  } = useForm<ContactFormData>({
+    mode: 'onBlur', defaultValues: {
+      subject: router.query && router.query.subject ? `${router.query.subject}` : undefined
+    }
+  })
 
   const resetForm = () => {
     reset()
