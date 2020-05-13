@@ -12,11 +12,13 @@ export interface ContactFormData {
 }
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
+	const data = JSON.parse(req.body)
+
 	if (req.method === "POST") {
 		res.setHeader("Content-Type", "application/json")
 
 		try {
-			await sendEmail(req.body)
+			await sendEmail(data)
 
 			res.statusCode = 200
 			res.json({ success: true })
