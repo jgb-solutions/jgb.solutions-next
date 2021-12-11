@@ -1,17 +1,6 @@
-import {
-  MdWeb,
-  MdDomain,
-  MdStorage,
-  MdDashboard,
-  MdDesktopMac,
-  MdHeadsetMic,
-  MdPhoneAndroid,
-  MdSubscriptions
-} from 'react-icons/md'
-
-const ServiceList = [
+const staticServiceList = [
   {
-    icon: <MdHeadsetMic />,
+    icon: 'MdHeadsetMic',
     image: '/assets/images/consulting-web.jpg',
     title: 'Consulting',
     description: `
@@ -21,7 +10,7 @@ const ServiceList = [
     `,
   },
   {
-    icon: <MdDesktopMac />,
+    icon: 'MdDesktopMac',
     image: '/assets/images/web-app-web.jpg',
     title: 'Web App',
     description: `
@@ -32,7 +21,7 @@ const ServiceList = [
     `,
   },
   {
-    icon: <MdPhoneAndroid />,
+    icon: 'MdPhoneAndroid',
     image: '/assets/images/mobile-web.jpg',
     title: 'Mobile App',
     description: `
@@ -42,7 +31,7 @@ const ServiceList = [
     `,
   },
   {
-    icon: <MdStorage />,
+    icon: 'MdStorage',
     image: '/assets/images/web-hosting-web.jpg',
     title: 'Web Hosting',
     description: `
@@ -52,7 +41,7 @@ const ServiceList = [
     `,
   },
   {
-    icon: <MdDomain />,
+    icon: 'MdDomain',
     image: '/assets/images/domain-web.jpg',
     title: 'Domain Name',
     description: `
@@ -62,7 +51,7 @@ const ServiceList = [
     `,
   },
   {
-    icon: <MdSubscriptions />,
+    icon: 'MdSubscriptions',
     image: '/assets/images/radio-web.jpg',
     title: 'Broadcasting',
     description: `
@@ -73,7 +62,7 @@ const ServiceList = [
     `,
   },
   {
-    icon: <MdWeb />,
+    icon: 'MdWeb',
     image: '/assets/images/wordpress-web.jpg',
     title: 'WP Theme',
     description: `
@@ -84,7 +73,7 @@ const ServiceList = [
     `,
   },
   {
-    icon: <MdDashboard />,
+    icon: 'MdDashboard',
     image: '/assets/images/seo-web.jpg',
     title: 'Marketing | SEO',
     description: `
@@ -95,4 +84,4 @@ const ServiceList = [
   },
 ]
 
-export default ServiceList
+export default staticServiceList

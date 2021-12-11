@@ -1,10 +1,10 @@
 import React from 'react'
-import { AppProps } from 'next/app'
-import PropTypes from 'prop-types'
 import Head from 'next/head'
+import { AppProps } from 'next/app'
+
 import { APP_NAME } from '../utils/constants'
-import "react-animated-slider/build/horizontal.css"
-import '../css/tailwind.css'
+
+import '../styles/global.css'
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props
@@ -13,14 +13,12 @@ export default function MyApp(props: AppProps) {
     <>
       <Head>
         <title key="title">{APP_NAME}</title>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
       </Head>
       <Component {...pageProps} />
     </>
   )
-}
-
-MyApp.propTypes = {
-  Component: PropTypes.elementType.isRequired,
-  pageProps: PropTypes.object.isRequired,
 }

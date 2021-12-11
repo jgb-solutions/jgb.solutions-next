@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+
+.slogan-gradient {
+  @apply bg-gradient-to-r from-orange to-white text-transparent bg-clip-text;
+}
+
+.splash-gradient {
+  @apply bg-dark bg-gradient-to-br from-black to-dark;
+}
+
+@tailwind utilities;

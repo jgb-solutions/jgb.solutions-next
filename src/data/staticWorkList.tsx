@@ -1,6 +1,6 @@
-import { WorkInterFace } from "../pages/work/[slug]"
+import { WorkInterFace } from '../../interfaces'
 
-const WorkList: WorkInterFace[] = [
+const staticWorkList: WorkInterFace[] = [
   {
     image: 'jgb-solutions.jpg',
     slug: 'jgb-solutions',
@@ -13,7 +13,7 @@ const WorkList: WorkInterFace[] = [
       It's our business home on the internet.</p>
 
       <p>We took our time to craft it so it can look and feel beautiful.</p>
-    `
+    `,
   },
   {
     image: 'simonefievre.jpg',
@@ -27,7 +27,7 @@ const WorkList: WorkInterFace[] = [
       her work and knowledge in health and beauty science.</p>
 
       <p>Built on WordPress.</p>
-    `
+    `,
   },
   {
     image: 'gwo-neg.jpg',
@@ -42,7 +42,7 @@ const WorkList: WorkInterFace[] = [
       and other places on the internet.</p>
 
       <p>Built on WordPress.</p>
-    `
+    `,
   },
   {
     image: 'akolad.jpg',
@@ -54,7 +54,7 @@ const WorkList: WorkInterFace[] = [
     detail: `
       <p class="mb-2">Akolad is a design and development agency.</p>
       <p>We created their website in  partnetship with them to help sell their development service..</p>
-    `
+    `,
   },
   {
     image: 'echojounal.jpg',
@@ -65,7 +65,7 @@ const WorkList: WorkInterFace[] = [
     url: `https://www.echojounal.com`,
     detail: `
       <p class="mb-2">Echo Jounal is an Haitian news website that publishes breaking news and a bunch of jokes.</p>
-    `
+    `,
   },
   {
     image: 'prestravaye.jpg',
@@ -76,7 +76,7 @@ const WorkList: WorkInterFace[] = [
     url: `http://www.prestravaye.com/`,
     detail: `
     <p class="mb-2">Près Travayè is an Haitian news website that publishes breaking news</p>
-    `
+    `,
   },
   {
     image: 'eneph.jpg',
@@ -88,7 +88,7 @@ const WorkList: WorkInterFace[] = [
     detail: `
       <p class="mb-2">ENEPH is a non-profit organization that helps kids of young age.</p>
       <p>We helped them present their awesome work online and welcomes donation</p>
-    `
+    `,
   },
   {
     image: 'mp3pam.jpg',
@@ -100,7 +100,7 @@ const WorkList: WorkInterFace[] = [
     detail: `
       <p class="mb-2">MP3Pam is a free entertainment platform for sharing all kinds of audios.</p>
       <p>It's one of our side projects that we make available online for people to use for free.</p>
-    `
+    `,
   },
   {
     image: 'infotoutan.jpg',
@@ -111,7 +111,7 @@ const WorkList: WorkInterFace[] = [
     url: `https://infotoutan.com`,
     detail: `
       <p class="mb-2">Haïti Info Toutan is a breaking news web app that we created in collaboration with one of our partners to shared news instantly.</p>
-    `
+    `,
   },
   {
     image: 'festival-film.jpg',
@@ -122,7 +122,7 @@ const WorkList: WorkInterFace[] = [
     url: `https://festivalfilm.jgb.solutions`,
     detail: `
       <p>Festival Film is an online event website for Haitian films.</p>
-    `
+    `,
   },
   {
     image: 'footkole.jpg',
@@ -133,7 +133,7 @@ const WorkList: WorkInterFace[] = [
     url: `https://www.footkole.com`,
     detail: `
       <p>Footkole is a popular Haitian website for soccer.</p>
-    `
+    `,
   },
   {
     image: 'forumtelecomhaiti.jpg',
@@ -144,7 +144,7 @@ const WorkList: WorkInterFace[] = [
     url: `https://www.forumtelecomhaiti.org`,
     detail: `
       <p>We made Forum Telecom Haiti in collaboration with one of our partners to support telecom events in Haiti and the local areas.</p>
-    `
+    `,
   },
   {
     image: 'geek509.jpg',
@@ -155,7 +155,7 @@ const WorkList: WorkInterFace[] = [
     url: `https://www.geek509.com`,
     detail: `
       <p>Geek509 is fun website for movie and Tv show news and recently has been publishing tech articles and tutorials to help young Haitians interested in tech.</p>
-    `
+    `,
   },
   {
     image: 'hn2030.jpg',
@@ -166,7 +166,7 @@ const WorkList: WorkInterFace[] = [
     url: `https://hn2030.jgb.solutions`,
     detail: `
       TODO: TEXT COMING SOON.
-    `
+    `,
   },
   {
     image: 'juno7.jpg',
@@ -177,7 +177,7 @@ const WorkList: WorkInterFace[] = [
     url: `https://www.juno7.ht`,
     detail: `
       TODO: TEXT COMING SOON.
-    `
+    `,
   },
   {
     image: 'juno7haiti.jpg',
@@ -188,7 +188,7 @@ const WorkList: WorkInterFace[] = [
     url: `https://juno7haiti.com`,
     detail: `
       TODO: TEXT COMING SOON.
-    `
+    `,
   },
   {
     image: 'loveandhopeorganizationhaiti.jpg',
@@ -199,7 +199,7 @@ const WorkList: WorkInterFace[] = [
     url: `http://www.loveandhopeorganizationhaiti.org`,
     detail: `
       TODO: TEXT COMING SOON.
-    `
+    `,
   },
   {
     image: 'ouanaminthefc.jpg',
@@ -210,7 +210,7 @@ const WorkList: WorkInterFace[] = [
     url: `https://www.ouanaminthefc.com`,
     detail: `
       TODO: TEXT COMING SOON.
-    `
+    `,
   },
   {
     image: 'sodei.jpg',
@@ -221,7 +221,7 @@ const WorkList: WorkInterFace[] = [
     url: `http://www.sodei.net`,
     detail: `
       TODO: TEXT COMING SOON.
-    `
+    `,
   },
   {
     image: 'jardin-fleuri.jpg',
@@ -232,7 +232,7 @@ const WorkList: WorkInterFace[] = [
     url: `http://garderiejardinfleuri.com`,
     detail: `
       TODO: TEXT COMING SOON.
-    `
+    `,
   },
   {
     image: 'nb-haiti.jpg',
@@ -243,7 +243,7 @@ const WorkList: WorkInterFace[] = [
     url: `http://nbhaiti.com`,
     detail: `
       TODO: TEXT COMING SOON.
-    `
+    `,
   },
   {
     image: 'mindvalley-haiti.jpg',
@@ -254,7 +254,7 @@ const WorkList: WorkInterFace[] = [
     url: `http://mindvalleyhaiti.b-thelight.com`,
     detail: `
       TODO: TEXT COMING SOON.
-    `
+    `,
   },
   {
     image: 'skypool.jpg',
@@ -265,8 +265,8 @@ const WorkList: WorkInterFace[] = [
     url: `http://skypool.kalikobeachclub.com`,
     detail: `
       TODO: TEXT COMING SOON.
-    `
+    `,
   },
 ]
 
-export default WorkList
+export default staticWorkList

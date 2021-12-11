@@ -1,25 +1,22 @@
 import React from 'react'
-import Link from 'next/link'
+import clx from 'classnames'
 import { useRouter } from 'next/router'
 
 import Logo from './Logo'
+import LinkWrapper from './LinkWrapper'
 
 const menuItems = [
   {
     to: '/about',
-    name: 'About'
-  },
-  {
-    to: '/#services',
-    name: 'Services'
+    name: 'About',
   },
   {
     to: '/work',
-    name: 'Work'
+    name: 'Work',
   },
   {
     to: '/contact',
-    name: 'Contact'
+    name: 'Contact',
   },
 ]
 
@@ -31,12 +28,20 @@ export default function Header() {
       <a>
         <Logo />
       </a>
-      <ul className="flex w-full sm:w-1/2 md:1/3 sm:text-lg text-xs font-bold uppercase pt-3 pb-2 sm:p-0 justify-around sm:justify-between sm:mr-2">
-        {menuItems.map((menuItem, index) => (
-          <li className={`hover:text-orange ${router.pathname == menuItem.to ? 'text-orange' : ''}`} key={index}>
-            <Link href={menuItem.to}>
-              <a>{menuItem.name}</a>
-            </Link>
+
+      <ul className="flex w-full sm:flex-none sm:max-w-sm sm:justify-end text-lg  font-bold uppercase pt-3 pb-2 sm:p-0 justify-around sm:mr-2">
+        {menuItems.map((menuItem) => (
+          <li className="hover:text-orange sm:ml-3" key={menuItem.name}>
+            <LinkWrapper
+              href={menuItem.to}
+              className={clx({
+                'text-orange animate-pulse': router.pathname.includes(
+                  menuItem.to
+                ),
+              })}
+            >
+              {menuItem.name}
+            </LinkWrapper>
           </li>
         ))}
       </ul>
