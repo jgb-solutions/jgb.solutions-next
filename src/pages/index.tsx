@@ -1,13 +1,13 @@
 import clx from 'classnames'
-import React from 'react'
-import { GetStaticProps, NextPage } from 'next'
+import Image from 'next/image'
 import { MdBuild } from 'react-icons/md'
+import { GetStaticProps, NextPage } from 'next'
 
 import WorkCard from '../components/WorkCard'
 import staticWorkList from '../data/staticWorkList'
 import MainLayout from '../components/layouts/Main'
-import staticServiceList from '../data/staticServiceList'
 import LinkWrapper from '../components/LinkWrapper'
+import staticServiceList from '../data/staticServiceList'
 import { ServiceInterFace, WorkInterFace } from '../../interfaces'
 
 type Props = {
@@ -42,7 +42,11 @@ const IndexPage: NextPage<Props> = ({ workList, serviceList }) => {
         {serviceList.map(({ title, description, icon, image }, index) => (
           <div className="mb-12 grid sm:grid-cols-2 sm:gap-3" key={title}>
             {index % 2 !== 0 && (
-              <img src={image} className="rounded-t-lg sm:rounded-large" />
+              <Image
+                src={image}
+                className="rounded-t-lg sm:rounded-large"
+                alt={title}
+              />
             )}
             <div
               className={clx(
@@ -60,7 +64,11 @@ const IndexPage: NextPage<Props> = ({ workList, serviceList }) => {
               <p>{description}</p>
             </div>
             {index % 2 === 0 && (
-              <img src={image} className="rounded-t-lg sm:rounded-large" />
+              <Image
+                src={image}
+                className="rounded-t-lg sm:rounded-large"
+                alt={title}
+              />
             )}
           </div>
         ))}

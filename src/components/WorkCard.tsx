@@ -18,6 +18,7 @@ const WorkCard: FC<Props> = ({ work }) => {
           photon={{
             width: 743,
           }}
+          alt={work.name}
         />
       )}
       <div className="p-4">

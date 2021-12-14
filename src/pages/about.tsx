@@ -1,11 +1,14 @@
-import SEO from '../components/SEO'
-import MainLayout from '../components/layouts/Main'
-import { APP_NAME } from '../utils/constants'
+import Image from 'next/image'
 
-const title = 'About Us'
+import SEO from '../components/SEO'
+import { APP_NAME } from '../utils/constants'
+import MainLayout from '../components/layouts/Main'
+import JGB_IMAGE from '../../public/assets/images/jgb-ceo.jpg'
+
+const title = 'About'
 const seoDescription = `${APP_NAME} (formerly JGB Neat Design) was started by Jean Gérard Bousiquot in early 2013 as a way to
-        freelance professionally. As the time passes he got more clients,
-        ranging from entrepreneurs amd small enterprises to medium ones in Haiti and abroad.`
+           freelance professionally. As the time passes he got more clients,
+           ranging from entrepreneurs and small enterprises to medium ones in Haiti and abroad.`
 
 const About = () => (
   <MainLayout>
@@ -18,11 +21,13 @@ const About = () => (
       </h1>
     </div>
 
-    <div className="mb-4">
-      <img
-        src="/images/jgb-ceo.jpg"
-        className="rounded-full shadow-sm display-block mx-auto"
-        width="200"
+    <div className="mb-4 text-center">
+      <Image
+        src={JGB_IMAGE}
+        className="rounded-full shadow-sm"
+        width={150}
+        height={150}
+        alt="Jean Gérard Bousiquot"
       />
     </div>
     <div className="shadow-md bg-dark splash-gradient text-white p-4 rounded-large mb-12 md:max-w-lg mx-auto">
