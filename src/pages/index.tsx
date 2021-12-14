@@ -42,11 +42,16 @@ const IndexPage: NextPage<Props> = ({ workList, serviceList }) => {
         {serviceList.map(({ title, description, icon, image }, index) => (
           <div className="mb-12 grid sm:grid-cols-2 sm:gap-3" key={title}>
             {index % 2 !== 0 && (
-              <Image
-                src={image}
-                className="rounded-t-lg sm:rounded-large"
-                alt={title}
-              />
+              <div className="max-w-full">
+                <Image
+                  src={image}
+                  className="rounded-t-lg sm:rounded-large"
+                  alt={title}
+                  layout="responsive"
+                  width={400}
+                  height={150}
+                />
+              </div>
             )}
             <div
               className={clx(
@@ -64,11 +69,16 @@ const IndexPage: NextPage<Props> = ({ workList, serviceList }) => {
               <p>{description}</p>
             </div>
             {index % 2 === 0 && (
-              <Image
-                src={image}
-                className="rounded-t-lg sm:rounded-large"
-                alt={title}
-              />
+              <div className="max-w-full">
+                <Image
+                  src={image}
+                  className="rounded-t-lg sm:rounded-large"
+                  alt={title}
+                  layout="responsive"
+                  width={400}
+                  height={150}
+                />
+              </div>
             )}
           </div>
         ))}
