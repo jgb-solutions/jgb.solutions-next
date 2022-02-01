@@ -8,7 +8,6 @@ import {
 } from 'react-icons/fa'
 
 import Logo from './Logo'
-import { APP_SLOGAN } from '../utils/constants'
 
 const socialNetworks = [
   {
@@ -52,7 +51,6 @@ export default function Footer() {
         url="/assets/images/logo-jgb-solutions-square-23k.png"
       />
 
-      <p className="text-2xl">{APP_SLOGAN}</p>
       <div className="flex w-full sm:w-1/2 justify-around my-12 px-8">
         {socialNetworks.map((socialNetwork, index) => {
           const { icon: Icon, color, title, link } = socialNetwork
